@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashutosh Singh - Futuristic Skills</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Dancing+Script:wght@700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f0f4f8;
+            color: #2c3e50;
+        }
+
+        .skills {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .skills-title {
+            text-align: center;
+            font-size: 3em;
+            margin-bottom: 40px;
+            color: #3498db;
+            font-family: 'Dancing Script', cursive;
+        }
+
+        .skills-description {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            line-height: 1.6;
+            color: #34495e;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-item {
+            background: #ffffff;
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .skill-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .skill-name {
+            font-size: 1.1em;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #2980b9;
+        }
+
+        .skill-icon {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            color: #3498db;
+        }
+
+        @media (max-width: 768px) {
+            .skills-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="skills">
+        <h2 class="skills-title">My Skillset</h2>
+        <p class="skills-description">
+            Equipped with cutting-edge expertise in data science, machine learning, and web technologies, 
+            I bring a versatile skill set to tackle complex challenges and drive innovation 
+            in the ever-evolving tech landscape.
+        </p>
+        <div class="skills-grid">
+            <div class="skill-item">
+                <div class="skill-icon">🐍</div>
+                <div class="skill-name">Python</div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-icon">🌶️</div>
+                <div class="skill-name">Flask</div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-icon">🐼</div>
+                <div class="skill-name">Pandas</div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-icon">🔢</div>
+                <div class="skill-name">NumPy</div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-icon">📊</div>
+                <div class="skill-name">Matplotlib</div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-icon">🌊</div>
+                <div class="skill-name">Seaborn</div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-icon">🤖</div>
+                <div class="skill-name">Machine Learning</div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-icon">🧠</div>
+                <div class="skill-name">Deep Learning</div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-icon">🕸️</div>
+                <div class="skill-name">Neural Networks</div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-icon">💬</div>
+                <div class="skill-name">NLP</div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-icon">🗣️</div>
+                <div class="skill-name">LLM</div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-icon">☁️</div>
+                <div class="skill-name">AWS</div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-icon">🎛️</div>
+                <div class="skill-name">Gradio ML</div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-icon">🔗</div>
+                <div class="skill-name">LangChain</div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-icon">📊</div>
+                <div class="skill-name">SQL</div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-icon">📦</div>
+                <div class="skill-name">Apache Cassandra</div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-icon">🍃</div>
+                <div class="skill-name">MongoDB</div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-icon">📈</div>
+                <div class="skill-name">Statistics</div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-icon">🔄</div>
+                <div class="skill-name">MLOps</div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-icon">🔍</div>
+                <div class="skill-name">Evidently AI</div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-icon">💎</div>
+                <div class="skill-name">Google Gemini</div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-icon">🧠</div>
+                <div class="skill-name">OpenAI</div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-icon">🌐</div>
+                <div class="skill-name">HTML</div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-icon">🎨</div>
+                <div class="skill-name">CSS</div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
