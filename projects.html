@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ashutosh Singh - Projects & Certifications</title>
+    <title>Ashutosh Singh - Portfolio</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Orbitron:wght@400;700&display=swap');
 
@@ -12,6 +12,7 @@
             --text-color: #e0e0ff;
             --accent-color: #00ffff;
             --card-bg: rgba(255, 255, 255, 0.05);
+            --hover-color: #00cccc;
         }
 
         * {
@@ -51,13 +52,13 @@
             margin-top: 60px;
         }
 
-        .projects, .certifications {
+        .projects, .certifications, .experience {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
         }
 
-        .project-card, .certification-card {
+        .project-card, .certification-card, .experience-card {
             background: var(--card-bg);
             border-radius: 15px;
             padding: 20px;
@@ -65,7 +66,7 @@
             box-shadow: 0 4px 6px rgba(0, 255, 255, 0.1);
         }
 
-        .project-card:hover, .certification-card:hover {
+        .project-card:hover, .certification-card:hover, .experience-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 6px 12px rgba(0, 255, 255, 0.2);
         }
@@ -78,14 +79,14 @@
             margin-bottom: 15px;
         }
 
-        .project-title, .certification-title {
+        .project-title, .certification-title, .experience-title {
             font-size: 1.2em;
             font-weight: bold;
             margin-bottom: 10px;
             color: var(--accent-color);
         }
 
-        .project-summary, .certification-issuer {
+        .project-summary, .certification-issuer, .experience-description {
             font-size: 0.9em;
             margin-bottom: 15px;
         }
@@ -102,11 +103,17 @@
         }
 
         .project-link:hover, .certification-link:hover {
-            background-color: #00cccc;
+            background-color: var(--hover-color);
+        }
+
+        .experience-date {
+            font-style: italic;
+            margin-bottom: 10px;
+            color: var(--accent-color);
         }
 
         @media (max-width: 768px) {
-            .projects, .certifications {
+            .projects, .certifications, .experience {
                 grid-template-columns: 1fr;
             }
         }
@@ -114,61 +121,103 @@
 </head>
 <body>
     <div class="container">
-        <h1>Ashutosh Singh</h1>
+        <header>
+            <h1>Ashutosh Singh</h1>
+        </header>
         
-        <h2>Projects</h2>
-        <div class="projects">
-            <div class="project-card">
-                <img src="images/1736170477126.png" alt="Project 1" class="project-image">
-                <div class="project-title">Agrivistar</div>
-                <p class="project-summary">My team and I are developing AgriVistaar, an Android app for farmers and buyers to directly trade goods. As the Full Stack Developer, I collaborate closely with my team to design using Figma and develop with Android Studio, XML, and Kotlin. We utilize Firebase for backend services and integrate Razorpay for payments. Common Android development tools include SDKs and Gradle for build automation, ensuring a smooth and efficient development process.</p>
-                <a href="https://drive.google.com/drive/folders/1SWiwfKCVQ5Oy3jLJVnRsRlGJBP6iSjBO?usp=drive_link" class="project-link">View Project</a>
-            </div>
-            <div class="project-card">
-                <img src="images/signify.jpg" alt="Project 2" class="project-image">
-                <div class="project-title">Signify-for deaf individuals</div>
-                <p class="project-summary">his project is a comprehensive platform designed to assist deaf individuals by offering live interpretation of sign language with accurate grammar and expressive visuals. It translates text or speech into American Sign Language (ASL) grammar using machine learning models, enabling seamless communication. The frontend, built with React, integrates a 3D avatar using Three.js to display real-time sign interpretations with precise hand gestures and facial expressions.</p>
-                <a href="https://signify-echelon.netlify.app/" class="project-link">View Project</a>
-            </div>
-            <div class="project-card">
-                <img src="images/Screenshot (124).png" alt="Project 3" class="project-image">
-                <div class="project-title">
-                    Covid-19 death Analysis of all country</div>
-                <p class="project-summary">This project is made for showing  the death rates in all the countries while the covid-19.Mainly it includes american and indian death analysis with python and matplotlib,numpy and pandas.</p>
-                <a href="https://github.com/nashutosh/Covid-19deathAnalysis-main" class="project-link">View Project</a>
-            </div>
-            <div class="project-card">
-                <img src="images/predictions.png" alt="Project 3" class="project-image">
-                <div class="project-title">
-                    US climate change analysis and predictions</div>
-                <p class="project-summary">This project leverages a robust tech stack to analyze climate change and predict temperature trends. Python is the core programming language, with libraries like Pandas and NumPy for data cleaning and manipulation. Seaborn and Matplotlib power rich visualizations, highlighting temperature trends, seasonal variations, and correlations. For predictive modeling, Scikit-learn is utilized to apply regression techniques for forecasting future temperature increases.</p>
-                <a href="https://github.com/nashutosh/Climate-change-and-temperature-predictions" class="project-link">View Project</a>
-            </div>
-        </div>
+        <main>
+            <section aria-labelledby="projects-heading">
+                <h2 id="projects-heading">Projects</h2>
+                <div class="projects">
+                    <article class="project-card">
+                        <img src="images/1736170477126.png" alt="Agrivistar app interface" class="project-image">
+                        <h3 class="project-title">Agrivistar</h3>
+                        <p class="project-summary">Developing an Android app for direct farmer-buyer trade. As Full Stack Developer, I use Figma for design, Android Studio with XML and Kotlin for development, Firebase for backend, and Razorpay for payments.</p>
+                        <a href="https://drive.google.com/drive/folders/1SWiwfKCVQ5Oy3jLJVnRsRlGJBP6iSjBO?usp=drive_link" class="project-link">View Project</a>
+                    </article>
+                    <article class="project-card">
+                        <img src="images/signify.jpg" alt="Signify app interface" class="project-image">
+                        <h3 class="project-title">Signify - for deaf individuals</h3>
+                        <p class="project-summary">A platform offering live interpretation of sign language with accurate grammar and expressive visuals. Built with React and Three.js, it translates text or speech into American Sign Language (ASL) using machine learning models.</p>
+                        <a href="https://signify-echelon.netlify.app/" class="project-link">View Project</a>
+                    </article>
+                    <article class="project-card">
+                        <img src="images/Screenshot (124).png" alt="Covid-19 death analysis graph" class="project-image">
+                        <h3 class="project-title">Covid-19 Death Analysis</h3>
+                        <p class="project-summary">Analysis of Covid-19 death rates across countries, with a focus on American and Indian data. Utilizes Python with matplotlib, numpy, and pandas for data visualization and analysis.</p>
+                        <a href="https://github.com/nashutosh/Covid-19deathAnalysis-main" class="project-link">View Project</a>
+                    </article>
+                    <article class="project-card">
+                        <img src="images/predictions.png" alt="US climate change prediction graph" class="project-image">
+                        <h3 class="project-title">US Climate Change Analysis and Predictions</h3>
+                        <p class="project-summary">Analyzes climate change and predicts temperature trends using Python, Pandas, NumPy, Seaborn, Matplotlib, and Scikit-learn for data manipulation, visualization, and predictive modeling.</p>
+                        <a href="https://github.com/nashutosh/Climate-change-and-temperature-predictions" class="project-link">View Project</a>
+                    </article>
+                </div>
+            </section>
 
-        <h2>Certifications</h2>
-        <div class="certifications">
-            <div class="certification-card">
-                <div class="certification-title">Machine Learning Specialization</div>
-                <p class="certification-issuer">Issued by: Coursera</p>
-                <a href="#" class="certification-link">View Certificate</a>
-            </div>
-            <div class="certification-card">
-                <div class="certification-title">AWS Certified Machine Learning - Specialty</div>
-                <p class="certification-issuer">Issued by: Amazon Web Services</p>
-                <a href="#" class="certification-link">View Certificate</a>
-            </div>
-            <div class="certification-card">
-                <div class="certification-title">Deep Learning Specialization</div>
-                <p class="certification-issuer">Issued by: DeepLearning.AI</p>
-                <a href="#" class="certification-link">View Certificate</a>
-            </div>
-            <div class="certification-card">
-                <div class="certification-title">TensorFlow Developer Certificate</div>
-                <p class="certification-issuer">Issued by: Google</p>
-                <a href="#" class="certification-link">View Certificate</a>
-            </div>
-        </div>
+            <section aria-labelledby="experience-heading">
+                <h2 id="experience-heading">Experience</h2>
+                <div class="experience">
+                    <article class="experience-card">
+                        <h3 class="experience-title">Full Stack Developer Intern</h3>
+                        <p class="experience-date">June 2023 - Present</p>
+                        <p class="experience-description">Working on the Agrivistar project, developing an Android app for farmers and buyers. Responsibilities include app design, frontend and backend development, and integration of payment systems.</p>
+                    </article>
+                    <article class="experience-card">
+                        <h3 class="experience-title">Data Science Research Assistant</h3>
+                        <p class="experience-date">January 2023 - May 2023</p>
+                        <p class="experience-description">Assisted in climate change research, analyzing temperature trends and creating predictive models using Python and various data science libraries.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section aria-labelledby="certifications-heading">
+                <h2 id="certifications-heading">Certifications</h2>
+                <div class="certifications">
+                    <article class="certification-card">
+                        <h3 class="certification-title">Big Data Hadoop and PySpark</h3>
+                        <p class="certification-issuer">Issued by: Simplilearn</p>
+                        <a href="https://www.linkedin.com/in/ashutosh-singh-7945812b2/details/certifications/1733405763471/single-media-viewer/?profileId=ACoAAEsw7yABFMLGn97_47RLfE7yFRaibZf-JX0" class="certification-link">View Certificate</a>
+                    </article>
+                    <article class="certification-card">
+                        <h3 class="certification-title">NumPy</h3>
+                        <p class="certification-issuer">Issued by: Simplilearn</p>
+                        <a href="https://www.linkedin.com/in/ashutosh-singh-7945812b2/details/certifications/1733241510584/single-media-viewer/?profileId=ACoAAEsw7yABFMLGn97_47RLfE7yFRaibZf-JX0" class="certification-link">View Certificate</a>
+                    </article>
+                    <article class="certification-card">
+                        <h3 class="certification-title">Machine Learning</h3>
+                        <p class="certification-issuer">Issued by: Simplilearn</p>
+                        <a href="https://www.linkedin.com/in/ashutosh-singh-7945812b2/details/certifications/1733213542856/single-media-viewer/?profileId=ACoAAEsw7yABFMLGn97_47RLfE7yFRaibZf-JX0" class="certification-link">View Certificate</a>
+                    </article>
+                    <article class="certification-card">
+                        <h3 class="certification-title">Vadodara Hackathon Finalist</h3>
+                        <p class="certification-issuer">Issued by: Parul University</p>
+                        <a href="https://www.linkedin.com/in/ashutosh-singh-7945812b2/details/certifications/1733232140379/single-media-viewer/?profileId=ACoAAEsw7yABFMLGn97_47RLfE7yFRaibZf-JX0" class="certification-link">View Certificate</a>
+                    </article>
+                    <article class="certification-card">
+                        <h3 class="certification-title">Fundamentals of Python</h3>
+                        <p class="certification-issuer">Issued by: Infosys</p>
+                        <a href="https://www.linkedin.com/in/ashutosh-singh-7945812b2/details/certifications/1733231926263/single-media-viewer/?profileId=ACoAAEsw7yABFMLGn97_47RLfE7yFRaibZf-JX0" class="certification-link">View Certificate</a>
+                    </article>
+                    <article class="certification-card">
+                        <h3 class="certification-title">NoSQL Databases</h3>
+                        <p class="certification-issuer">Issued by: Infosys</p>
+                        <a href="https://www.linkedin.com/in/ashutosh-singh-7945812b2/details/certifications/1733231804908/single-media-viewer/?profileId=ACoAAEsw7yABFMLGn97_47RLfE7yFRaibZf-JX0" class="certification-link">View Certificate</a>
+                    </article>
+                    <article class="certification-card">
+                        <h3 class="certification-title">Best Speaker and Listener</h3>
+                        <p class="certification-issuer">Issued by: Parul University</p>
+                        <a href="https://www.linkedin.com/in/ashutosh-singh-7945812b2/details/certifications/1075836828/multiple-media-viewer/?profileId=ACoAAEsw7yABFMLGn97_47RLfE7yFRaibZf-JX0&treasuryMediaId=1736242624563" class="certification-link">View Certificate</a>
+                    </article>
+                    <article class="certification-card">
+                        <h3 class="certification-title">Hackathon Winner</h3>
+                        <p class="certification-issuer">Issued by: Parul University</p>
+                        <a href="https://www.linkedin.com/in/ashutosh-singh-7945812b2/overlay/1736270534841/single-media-viewer/?profileId=ACoAAEsw7yABFMLGn97_47RLfE7yFRaibZf-JX0" class="certification-link">View Certificate</a>
+                    </article>
+                </div>
+            </section>
+        </main>
     </div>
 </body>
 </html>
