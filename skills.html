@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ashutosh Singh - Futuristic Skills</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Dancing+Script:wght@700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Orbitron:wght@700&display=swap');
 
         * {
             margin: 0;
@@ -15,8 +15,9 @@
 
         body {
             font-family: 'Roboto', sans-serif;
-            background-color: #f0f4f8;
-            color: #2c3e50;
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+            color: #ffffff;
+            min-height: 100vh;
         }
 
         .skills {
@@ -27,51 +28,62 @@
 
         .skills-title {
             text-align: center;
-            font-size: 3em;
+            font-size: 3.5em;
             margin-bottom: 40px;
-            color: #3498db;
-            font-family: 'Dancing Script', cursive;
+            color: #ffffff;
+            font-family: 'Orbitron', sans-serif;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
         }
 
         .skills-description {
             text-align: center;
             max-width: 800px;
-            margin: 0 auto 40px;
-            line-height: 1.6;
-            color: #34495e;
+            margin: 0 auto 60px;
+            line-height: 1.8;
+            font-size: 1.1em;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
         }
 
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
         }
 
         .skill-item {
-            background: #ffffff;
+            background: rgba(255, 255, 255, 0.1);
             border-radius: 15px;
-            padding: 20px;
+            padding: 25px;
             text-align: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
         }
 
         .skill-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            background: rgba(255, 255, 255, 0.2);
         }
 
         .skill-name {
-            font-size: 1.1em;
+            font-size: 1.2em;
             font-weight: bold;
-            margin-bottom: 15px;
-            color: #2980b9;
+            margin-top: 15px;
+            color: #ffffff;
         }
 
         .skill-icon {
-            font-size: 2.5em;
+            font-size: 3em;
             margin-bottom: 15px;
-            color: #3498db;
+            transition: transform 0.3s ease;
+        }
+
+        .skill-item:hover .skill-icon {
+            transform: scale(1.2);
         }
 
         @media (max-width: 768px) {
@@ -83,6 +95,9 @@
         @media (max-width: 480px) {
             .skills-grid {
                 grid-template-columns: 1fr;
+            }
+            .skills-title {
+                font-size: 2.5em;
             }
         }
     </style>
@@ -204,16 +219,14 @@
                 <div class="skill-icon">📑</div>
                 <div class="skill-name">Excel</div>
             </div>
-             <div class="skill-item">
+            <div class="skill-item">
                 <div class="skill-icon">🧩</div>
                 <div class="skill-name">MLflow and Dagshub</div>
             </div>
-        </div>
             <div class="skill-item">
                 <div class="skill-icon">🐳</div>
                 <div class="skill-name">Docker</div>
             </div>
-        </div>
             <div class="skill-item">
                 <div class="skill-icon">🔀</div>
                 <div class="skill-name">CI/CD</div>
